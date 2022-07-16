@@ -1,0 +1,3 @@
+module BasicProfile {
+	exports main;
+}
