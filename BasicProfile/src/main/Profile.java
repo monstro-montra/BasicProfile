@@ -5,10 +5,14 @@ public class Profile { //name of project
 
 	public static void main(String[] args) { //main method for java
 		
-		Scanner in = null; //creates a new variable called 'in' with the type being Scanner.
+		
+/*The following statement will a new variable called 'in' with the type being Scanner. 
+ * Using the try with resource statement, I can avoid a resource leak error where
+ * the scanner never closes. For reference, use the following URL.
+ * https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
+*/
 
-		try{
-			in = new Scanner (System.in);
+		try(Scanner in = new Scanner (System.in)){
 			System.out.println("Insert your first name:");
 		
 			String firstName = in.nextLine();
@@ -20,13 +24,7 @@ public class Profile { //name of project
 			System.out.println("Your full name is: " + firstName + " " + lastName);
 		}
 
-		finally{
-			if(in != null){
-				in.close();
-			}
-		}
-		
-
+	
 	}
 
 }
