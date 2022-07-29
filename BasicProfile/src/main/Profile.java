@@ -50,6 +50,7 @@ public class Profile { //name of project
 			System.out.println("Zip Code: " + zipCode); //print value of zipCode
 			System.out.println("You may now close this program.");
 			System.out.println("Thank you for playing!");
+			System.out.println("This is for a test commit.");
 
 		}// hello world!
 	}
